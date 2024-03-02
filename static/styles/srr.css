@@ -37,6 +37,16 @@ h2.drow {
     text-align: center;
 }
 
+h3 {
+    font-family: "IM Fell English", serif;
+    text-align: center;
+}
+
+h3.drow {
+    font-family: "Drow Angular", serif;
+    text-align: center;
+}
+
 button {
     display: flex;
     justify-content: center;
@@ -78,6 +88,22 @@ table {
 
 tr {
     text-align: center;
+}
+
+th {
+    font-family: "IM Fell English", serif;
+}
+
+td {
+    font-family: "IM Fell English", serif;
+}
+
+select {
+    font-family: "IM Fell English", serif;
+}
+
+input {
+    font-family: "IM Fell English", serif;
 }
 
 .center {
