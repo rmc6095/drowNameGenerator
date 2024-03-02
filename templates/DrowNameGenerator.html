@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Drow Name Generator</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/srr.css') }}">
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+		</style>
+		<script type="javascript">
+			function generateName() {
+				var pythonPath = "./drow_name_gen.py";
+				subprocess.run(["python", pythonPath]);
+			}
+		</script>
+  </head>
+    <body>
+
+    <h1>Thia'afay's Drow Name Generator</h1>
+    <h1 class="drow">Thia'afay's Ilythiiri Kaas Beldroin</h1>
+
+    <form action="{{ url_for('generate') }}" method="post">
+    <table>
+            <tr>
+                <th>Gender</th>
+                <th>Length</th>
+                <th>Apostrophes (Vowels)</th>
+                <th>Apostrophes (Consonants)</th>
+                <th>Birth Order</th>
+            <tr>
+                <td>
+                    <select name="gender">
+                        <option value="F">Feminine</option>
+                        <option value="M">Masculine</option>
+                        <option value="N">Neutral</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="length">
+                        <option value="n">Standard</option>
+                        <option value="l">Longer</option>
+                        <option value="s">Shorter</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="range" min="1" max="100" value="75" class="slider" name="vowels">
+                </td>
+                <td>
+                    <input type="range" min="1" max="100" value="50" class="slider" name="consonants">
+                </td>
+                <td>
+                    <select name="order">
+                        <option value="True">Yes</option>
+                        <option value="False">No</option>
+                        <option value="None">Either</option>
+                    </select>
+                </td>
+                <td><input type="submit" class="btn btn-primary" value="Generate"></td>
+            </tr>
+        </table>
+    </form>
+
+    <h2 id="drow_string">{{ drow_string }}</h2>
+    <h2 class="drow" id="drow_string">{{ drow_string }}</h2>
+    <h2 id="trans_string">{{ trans_string }}</h2>
+
+
+	</body>
+</html>

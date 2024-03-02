@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Drow Angular";
+    src: url("../fonts/Drow-Angular.ttf") format("truetype");
+    src: url("../fonts/Drow-Angular.woff") format("woff");
+}
+
+.im-fell english-regular {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.im-fell english-regular-italic {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+h1 {
+    font-family: "IM Fell English", serif;
+    text-align: center;
+}
+
+h1.drow {
+    font-family: "Drow Angular", serif;
+    text-align: center;
+}
+
+h2 {
+    font-family: "IM Fell English", serif;
+    text-align: center;
+}
+
+h2.drow {
+    font-family: "Drow Angular", serif;
+    text-align: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #925ca5;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #925ca5;
+  cursor: pointer;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    margin: 0 auto;
+}
